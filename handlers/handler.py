@@ -149,6 +149,7 @@ async def add_number_winners(message: types.Message, state: FSMContext):
 # перехватывает время оправления розыгрыша
 @router.message(AddRaffle.publish_time)
 async def add_time_publish(message: types.Message, state: FSMContext):
+    print("f")
     # проверка на не является ли текст одной из команд меню
     if await check_message(message, state):
         return None
